@@ -1,9 +1,8 @@
 # Laporan Singkat: Real-time rPPG Heart Rate Detection
 
-**Penulis:**
-Tim / Pengembang: (Isi nama Anda)
+**Nama:** Elma Nurul Fatika
 
-**Tanggal:** 2025-12-01
+**NIM:** 122140069
 
 ---
 
@@ -26,7 +25,7 @@ Proyek ini mengimplementasikan deteksi detak jantung real‑time berbasis remote
 ## Implementasi (file utama)
 - `rppg.py` — skrip utama yang menjalankan pipeline rPPG:
   - Kelas `RPPGDetector` menyimpan buffer, melakukan ekstraksi ROI, menerapkan POS, memfilter sinyal, dan memperkirakan BPM.
-  - Kontrol runtime: `ESC` (exit), `R` (reset buffers), `M` (toggle mirror preview).
+  - Kontrol runtime: `ESC` (exit), `R` (reset buffers), `M` (toggle mirror preview), `1` (ROI Forehead), `2` (ROI Check Left), and `3` (ROI Check Right).
   - GUI: side‑by‑side video + signal canvas, status BPM dan bar confidence.
 - `requirements.txt` — daftar dependensi minimal (numpy, opencv-python, mediapipe, scipy).
 
@@ -58,16 +57,6 @@ python rppg.py
 - Tambahkan argumen CLI untuk mengatur `mirror`, `window_size`, dan `pos_window_sec` agar lebih mudah tuning.
 - Eksperimen dengan stride >1 untuk mengurangi beban CPU (kompromi antara kelancaran sinyal dan performa).
 - Tambahkan logging / benchmarking untuk mengukur latensi end‑to‑end dan akurasi vs ground truth (sensor detak jantung).
-- Peningkatan visual: tampilkan indikator ON/OFF mirror di antarmuka, dan opsi memilih ROI lain (pipi/area mata).
+- Peningkatan visual: tampilkan indikator ON/OFF mirror di antarmuka, dan opsi memilih ROI lain (area dahi/pipi).
 
 ---
-
-## Lampiran
-- File utama: `rppg.py`
-- Dependensi: `requirements.txt` (numpy, opencv-python, mediapipe, scipy)
-
-Jika Anda mau, saya bisa:
-- Menambahkan ringkasan hasil pengujian (screenshots / sample output) ke laporan ini, atau
-- Mengubah structure report menjadi README yang lebih lengkap.
-
-Selesai — ingin saya tambahkan nama Anda (penulis) dan tautan ke commit/penjelasan tambahan di README.md?

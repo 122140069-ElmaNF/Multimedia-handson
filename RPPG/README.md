@@ -1,7 +1,6 @@
 # Real-time Remote Photoplethysmography (rPPG) Heart Rate Detection
 
 **Mata Kuliah:** Sistem Teknologi Multimedia  
-**Institut:** Institut Teknologi Sumatera
 
 ## 📋 Deskripsi Proyek
 
@@ -75,12 +74,15 @@ pip install opencv-python mediapipe numpy scipy matplotlib
 ### Menjalankan Program
 
 ```bash
-python rppg_realtime.py
+python rppg.py
 ```
 
 ### Kontrol Keyboard
 - **`q`**: Keluar dari program
 - **`r`**: Reset buffer (mulai deteksi dari awal)
+- **`1`**: Untuk memilih area dahi
+- **`2`**: Untuk memilih area pipi kiri
+- **`3`**: Untuk memilih area pipi kanan
 
 ### Instruksi Penggunaan
 1. Pastikan pencahayaan ruangan cukup (tidak terlalu gelap/terang)
